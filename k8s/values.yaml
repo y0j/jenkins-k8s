@@ -1,38 +1,28 @@
+---
 controller:
   tag: 2.271
+  serviceType: NodePort
+  storageClass: jenkins-pv
   installPlugins:
     - configuration-as-code:1.46
     - kubernetes:1.28.4
-    - workflow-aggregator
+    - workflow-aggregator:2.6
+    - workflow-job:2.40
     - credentials-binding:1.24
     - job-dsl:1.77
     - git:4.5.0
-    - nodejs:1.3.9
 
-agent:
-  podName: jenkins-worker
-  customJenkinsLabels: jenkins-worker
-  resources:
-    limits:
-      cpu: "1"
-      memory: "512Mi"
+  serviceAccount:
+    create: false
+    name: jenkins
+    annotations: {}
 
   JCasC:
     enabled: true
     configScripts:
       welcome-message: |
         jenkins:
-          systemMessage: Configured by Configuration as Code plugin 
-      nodejs-config: |
-        tool:
-          nodejs:
-            installations:
-              - name: "NodeJS"
-                home: ""
-                properties:
-                  - installSource:
-                      installers:
-                        - nodeJSInstaller:
-                            id: "15.4.0"
-                            npmPackagesRefreshHours: 72
+          systemMessage: Configured by Configuration as Code plugin
+          clouds:
+            - kubernetes:
 
