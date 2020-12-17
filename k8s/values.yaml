@@ -25,4 +25,25 @@ controller:
           systemMessage: Configured by Configuration as Code plugin
           clouds:
             - kubernetes:
-
+              name: kubernetes
+              serverUrl: https://192.168.99.102:8443
+              namespace: jenkins
+              jenkinsUrl: http://172.17.0.3:8080
+              templates:
+                - name: k8s-agent
+                  idleMinutes: 30
+                  namespace: jenkins
+                  nodeUsageMode: NORMAL
+                  serviceAccount: jenkins
+                  containers:
+                    - name: jnlp
+                    image: jenkins/inbound-agent:4.3-9-alpine
+                    ttyEnabled: true
+                  volumes:
+                    - persistentVolumeClaim:
+                      claimName: jenkins-pv
+                      mountPath: /home/jenkins/
+                      readOnly: false
+        unclassified:
+          location:
+            adminAddress: "den.karabanov@gmail.com"
