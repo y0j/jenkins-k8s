@@ -58,8 +58,10 @@ And get Jenkins 'admin' user password:
 kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/chart-admin-password && echo
 ```
 
-Open http://<Jenkins ip-address>:30000 and run the nodejs-example pipeline job. 
-
+Open http://<Jenkins ip-address>:30000 and run the nodejs-example pipeline job.<br>
+<br>
+![ScreenShot](pipeline.png)
+<br>
 
 It will clone the https://github.com/y0j/node_js-example repository and does install and test the project in the .
 
