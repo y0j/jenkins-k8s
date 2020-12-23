@@ -63,15 +63,15 @@ Open http://<Jenkins ip-address>:30000 and run the nodejs-example pipeline job.
 
 It will clone the https://github.com/y0j/node_js-example repository and does install and test the project in the .
 
-## Links which helps me
-https://www.jenkins.io/doc/book/installing/kubernetes/
-https://cloud.google.com/solutions/jenkins-on-kubernetes-engine
-https://www.jenkins.io/projects/jcasc/
-https://www.jenkins.io/doc/book/pipeline/
-https://github.com/jenkinsci/jep/tree/master/jep/201
-https://github.com/jenkinsci/helm-charts
-https://github.com/jenkinsci/configuration-as-code-plugin
-https://github.com/jenkinsci/configuration-as-code-plugin/tree/master/demos/kubernetes
-https://github.com/jenkinsci/kubernetes-plugin
-https://github.com/jenkinsci/kubernetes-plugin/tree/master/examples
-Many more less significant from google search
+## Links which helps me a lot
+https://www.jenkins.io/doc/book/installing/kubernetes/<br>
+https://cloud.google.com/solutions/jenkins-on-kubernetes-engine<br>
+https://www.jenkins.io/projects/jcasc/<br>
+https://www.jenkins.io/doc/book/pipeline/<br>
+https://github.com/jenkinsci/jep/tree/master/jep/201<br>
+https://github.com/jenkinsci/helm-charts<br>
+https://github.com/jenkinsci/configuration-as-code-plugin<br>
+https://github.com/jenkinsci/configuration-as-code-plugin/tree/master/demos/kubernetes<br>
+https://github.com/jenkinsci/kubernetes-plugin<br>
+https://github.com/jenkinsci/kubernetes-plugin/tree/master/examples<br>
+Many more less significant from google search<br>
