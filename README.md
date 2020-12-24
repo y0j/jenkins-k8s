@@ -74,12 +74,12 @@ Open http://jenkins_ip-address:30000 and run the nodejs-example pipeline job.<br
 The job will clone the https://github.com/y0j/node_js-example repository, install and run a test for the project.
 
 ## Further Development
-Configure domain name for Jenkins controller
-Configure TLS for the Jenkins domain name
-Configure Jenkins key store and internal TLS connection between Jenkis controller and agents
-Create jenkins users, not use 'admin' for building pipelines
-Creation of Kubernetes network policy resource to specify from which CIDRs the agents can be connected to the controller
-Install Jenkins on EKS or GKE cluster for better availability and scalability, use NFS instead of hostPath for PersistentVolume and configure agent resource usage according to the setup goal
+Configure domain name for Jenkins controller<br>
+Configure TLS for the Jenkins domain name<br>
+Configure Jenkins key store and internal TLS connection between Jenkis controller and agents<br>
+Create jenkins users, not use 'admin' for building pipelines<br>
+Creation of Kubernetes network policy resource to specify from which CIDRs the agents can be connected to the controller<br>
+Install Jenkins on EKS or GKE cluster for better availability and scalability, use NFS instead of hostPath for PersistentVolume and configure agent resource usage according to the setup goal<br>
 
 ## Links which helps me a lot
 [Installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/)<br>
