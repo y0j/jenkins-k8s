@@ -102,6 +102,17 @@ controller:
     configScripts:
       jcasc-custom-config: |
         jenkins:
+          authorizationStrategy:
+            loggedInUsersCanDoAnything:
+              allowAnonymousRead: false
+          securityRealm:
+            local:
+              allowsSignup: false
+              enableCaptcha: false
+              users:
+              - id: "${chart-admin-username}"
+                name: "Jenkins Admin"
+                password: "${chart-admin-password}"
           clouds:
           - kubernetes:
               containerCap: 10

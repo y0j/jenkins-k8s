@@ -7,7 +7,7 @@ In order to accomplish the demo assessment, I use the following technologies:
 - Jenkins Community Kubernetes Helm Charts to deploy Jenkins on the Kubernetus cluster
 - Terraform with hashicorp/kubernetes and hashicorp/helm providers to automate my Jenkins deployment
 - Kubernetes command-line tool(kubectl) to get nessesary information after Jenkins deployment
-- Kubernetes plugin for Jenkins to run Jenkins agents dynamicly on the Kubernetes cluster
+- Kubernetes plugin for Jenkins to run Jenkins agents dynamicly on the Kubernetes cluster and use the compute power only whenever needed to build something
 - Jenkins Configuration as Code (JCasC) Plugin to configure Kubernetes plugin and set up a test pipeline job
 - Small nodejs github project with Jenkinsfile to be triggered by the pipeline job
 - Jenkins and nodejs Docker containers from Docker Hub
@@ -41,7 +41,6 @@ Enough rambling lets try it out.
 [Virtualbox](https://www.virtualbox.org/wiki/Downloads)<br>
 [Minikube](https://minikube.sigs.k8s.io/docs/start/)<br>
 [Terraform](https://www.terraform.io/downloads.html) >= v0.12.x<br>
-[Helm](https://helm.sh/docs/intro/install/) v3.4.x<br>
 [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)<br>
 
 ### Steps to reproduce
@@ -75,6 +74,12 @@ Open http://jenkins_ip-address:30000 and run the nodejs-example pipeline job.<br
 The job will clone the https://github.com/y0j/node_js-example repository, install and run a test for the project.
 
 ## Further Development
+Configure domain name for Jenkins controller
+Configure TLS for the Jenkins domain name
+Configure Jenkins key store and internal TLS connection between Jenkis controller and agents
+Create jenkins users, not use 'admin' for building pipelines
+Creation of Kubernetes network policy resource to specify from which CIDRs the agents can be connected to the controller
+Install Jenkins on EKS or GKE cluster for better availability and scalability, use NFS instead of hostPath for PersistentVolume and configure agent resource usage according to the setup goal
 
 ## Links which helps me a lot
 [Installing Jenkins on Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/)<br>
