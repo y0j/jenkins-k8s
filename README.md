@@ -1,7 +1,6 @@
-# DevOps Engineer Assessment
+## Jenkins on top of Kubernetus demo 
 
-In order to accomplish the demo assessment, I use the following technologies:
-
+#### List of technologies:
 - Virtualbox as a platform for running Minikube
 - Minikube as a ready to use Kubernetes cluster
 - Jenkins Community Kubernetes Helm Charts to deploy Jenkins on the Kubernetus cluster
